@@ -1,3 +1,0 @@
-Convnet_avgpool.onnx
-./specs/avgpool_specs/prop_0_0.02.vnnlib
-300
