@@ -1,1 +1,0 @@
-~/Desktop/proiectVF/alpha-beta-CROWN/complete_verifier$ python abcrown.py --device cpu --config exp_configs/vnncomp23/tllVerifyBench.yaml > output.txt
