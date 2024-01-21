@@ -1,1 +1,7 @@
-~/Desktop/proiectVF/alpha-beta-CROWN/complete_verifier$ python abcrown.py --device cpu --config exp_configs/vnncomp23/tllVerifyBench.yaml > output.txt
+alfa-beta-crown
+
+~/Desktop/proiectVF/alpha-beta-CROWN/complete_verifier$ python abcrown.py --device cpu --config exp_configs/vnncomp23/tllVerifyBench.yaml > output.txt 
+
+nnenum
+~/Desktop/proiectVF/nnenum$ python3 run_nnenum.py -i ../vnncomp2023_benchmarks/benchmarks/tllverifybench/instances.csv -p ../vnncomp2023_benchmarks/benchmarks/tllverifybench/ -s vnncomp_scripts/run_instance.sh > output.txt 
+
