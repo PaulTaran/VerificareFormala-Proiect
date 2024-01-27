@@ -2,7 +2,7 @@
 
 VERSION_STRING=v1
 if [[ -z "${VNNCOMP_PYTHON_PATH}" ]]; then
-	VNNCOMP_PYTHON_PATH=/home/ubuntu/miniconda/envs/alpha-beta-crown/bin
+	VNNCOMP_PYTHON_PATH=/home/pol/anaconda3/envs/alpha-beta-crown/bin
 fi
 
 # check arguments

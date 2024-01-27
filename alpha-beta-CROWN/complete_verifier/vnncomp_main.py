@@ -121,8 +121,6 @@ elif args.CATEGORY == "sri_resnet_a":
 elif args.CATEGORY == "sri_resnet_b":
     cmd += "exp_configs/vnncomp22/resnet_B.yaml"
 
-elif args.CATEGORY == "tllverifybench":
-    cmd += "exp_configs/vnncomp22/tllVerifyBench.yaml"
 
 elif args.CATEGORY == "vggnet16_2022":
     cmd += "exp_configs/vnncomp22/vggnet16.yaml"

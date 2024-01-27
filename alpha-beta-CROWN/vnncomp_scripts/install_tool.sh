@@ -5,8 +5,8 @@
 TOOL_NAME=alpha-beta-CROWN
 VERSION_STRING=v1
 if [[ -z "${VNNCOMP_PYTHON_PATH}" ]]; then
-	VNNCOMP_PYTHON_PATH=/home/ubuntu/miniconda/envs/alpha-beta-crown/bin
-	VNNCOMP_PYTHON_LEGACY_PATH=/home/ubuntu/miniconda/envs/alpha-beta-crown-2022/bin
+	VNNCOMP_PYTHON_PATH=/home/pol/anaconda3/envs/alpha-beta-crown/bin
+	VNNCOMP_PYTHON_LEGACY_PATH=/home/pol/anaconda3/envs/alpha-beta-crown-2022/bin
 fi
 
 # check arguments
@@ -28,11 +28,11 @@ sudo -E DEBIAN_FRONTEND=noninteractive apt install -y sudo vim-gtk curl wget git
 grep AMD /proc/cpuinfo > /dev/null && echo "export MKL_DEBUG_CPU_TYPE=5" >> ${HOME}/.profile
 echo "export OMP_NUM_THREADS=1" >> ${HOME}/.profile
 
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
-sh miniconda.sh -b -p ${HOME}/miniconda
-echo 'export PATH=${PATH}:'${HOME}'/miniconda/bin' >> ~/.profile
+wget https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh -O anaconda3.sh
+sh anaconda3.sh -b -p ${HOME}/anaconda3
+echo 'export PATH=${PATH}:'${HOME}'/anaconda3/bin' >> ~/.profile
 echo "alias py37=\"source activate alpha-beta-crown\"" >> ${HOME}/.profile
-export PATH=${PATH}:$HOME/miniconda/bin
+export PATH=${PATH}:$HOME/anaconda3/bin
 
 # Install NVIDIA driver
 DRIVER_VERSION=535.54.03
@@ -48,8 +48,8 @@ sudo nvidia-smi -pm 1
 nvidia-smi
 
 # Install conda environment
-${HOME}/miniconda/bin/conda env create --name alpha-beta-crown -f ${TOOL_DIR}/complete_verifier/environment_pyt111.yaml
-${HOME}/miniconda/bin/conda env create --name alpha-beta-crown-2022 -f ${TOOL_DIR}/complete_verifier/environment_2022.yaml
+${HOME}/anaconda3/bin/conda env create --name alpha-beta-crown -f ${TOOL_DIR}/complete_verifier/environment_pyt111.yaml
+${HOME}/anaconda3/bin/conda env create --name alpha-beta-crown-2022 -f ${TOOL_DIR}/complete_verifier/environment_2022.yaml
 ${VNNCOMP_PYTHON_LEGACY_PATH}/pip install -U --no-deps git+https://github.com/dlshriver/DNNV.git@4d4b124bd739b4ddc8c68fed1af3f85b90386155#egg=dnnv
 
 # Install CPLEX

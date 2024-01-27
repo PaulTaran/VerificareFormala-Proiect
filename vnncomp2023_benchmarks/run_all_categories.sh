@@ -2,7 +2,7 @@
 # run measurements for all categories for a single tool (passed on command line)
 # seven args: 'v1' (version string), tool_scripts_folder, vnncomp_folder, result_csv_file, counterexamples_folder, categories, all|different|first
 #
-# for example ./run_all_categories.sh v1 ~/repositories/simple_adversarial_generator/vnncomp_scripts . ./out.csv ./counterexamples "test acasxu" all
+# for example ./run_all_categories.sh v1 ../alpha-beta-CROWN/vnncomp_scripts . ./out.csv ./counterexamples "tllverifybench" all > outputuri.txt 2>&1
 
 VERSION_STRING=v1
 SCRIPT_PATH=$(dirname $(realpath $0))
